@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: micro-job-test-integraciones
+  name: micro-job
 spec:
   template:
     metadata:
-      name: micro-job-test-integraciones
+      name: micro-job
       labels:  
-        app: micro-job-test-integraciones
+        app: micro-job
     spec:
       containers:
       - name: micro-container
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: micro-srv-test-integraciones
+  name: micro-srv
 spec:
   selector:
-    app: micro-job-test-integraciones
+    app: micro-job
   ports:
     - protocol: TCP
       port: 8080
