@@ -1,15 +1,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: micro-job
+  name: micro-job-edgar
 spec:
   template:
     metadata:
-      name: micro-job
+      name: micro-job-edgar
       labels:  
-        app: micro-job
+        app: micro-job-edgar
     spec:
-      containers:
+      containers: 
       - name: micro-container
         image: israelglez1992/my-spring-app
         ports:
@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: micro-srv
+  name: micro-srv-edgar
 spec:
   selector:
-    app: micro-job
+    app: micro-job-edgar
   ports:
     - protocol: TCP
       port: 8080
