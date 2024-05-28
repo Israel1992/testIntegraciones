@@ -16,9 +16,9 @@ spec:
         - containerPort: 8080
         env:
           - name: USERNAME_SMTP
-            value: AKIAYIKGOS26TOXKQYPY
+            value: A
           - name: PASSWORD_SMTP
-            value: BB4vbi6J97rT6pnrbWJpADGRGZt3vj856zMJ040Z1fRd
+            value: B
       restartPolicy: Never
   backoffLimit: 2
 
